@@ -33,12 +33,12 @@
         $stmt = $conn ->prepare($INSERT);
         $stmt -> bind_param("ssssssi",$firstname,$lastname,$username,$email,$password,$Gender,$phone);
         $stmt -> execute();
-        $relogin= "<script>  alert('registration succesfully completed....'); window.location ='login.html';</script>";
+        $relogin= "<script>  alert('registration succesfully completed....'); window.location ='login.php';</script>";
         echo $relogin;
 
       }
       else{
-        $relogin= "<script>  alert('someone already register using this email'); window.location ='signin.html';</script>";
+        $relogin= "<script>  alert('someone already register using this email'); window.location ='registration.html';</script>";
         echo $relogin;
       }
       $stmt ->close();
